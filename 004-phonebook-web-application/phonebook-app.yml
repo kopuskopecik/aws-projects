@@ -9,8 +9,12 @@ Description: |
   WebServerASG Auto Scaling Group is using the WebServerLT Launch Template in order to spin up instances needed.
   WebServerLT Launch Template is configured to prepare Python Flask environment on EC2,
   and to deploy Phonebook Application on Flask Server after downloading the app code from Github repository.
-  
- 
+
+Parameters:
+  Subnets:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: The list of SubnetIds in your Virtual Private Cloud (VPC) 
+
 Resources:
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -42,7 +46,7 @@ Resources:
       LaunchTemplateData: 
         ImageId: ami-0947d2ba12ee1ff75
         InstanceType: t2.micro
-        KeyName: serdar
+        KeyName: mykeypair
         SecurityGroupIds: 
           - !GetAtt WebServerSecurityGroup.GroupId
         TagSpecifications: 
@@ -86,13 +90,7 @@ Resources:
       Scheme: internet-facing
       SecurityGroups:
         - !GetAtt ALBSecurityGroup.GroupId
-      Subnets:
-        - subnet-077c9758
-        - subnet-3246e63c
-        - subnet-3ccd235a
-        - subnet-8d8dbfb3
-        - subnet-c41ba589
-        - subnet-ed49bccc
+      Subnets: !Ref Subnets
       Type: application
 
   ALBListener:
@@ -126,7 +124,7 @@ Resources:
     Properties:
       GroupDescription: Front-end access
       DBSecurityGroupIngress:
-        - CIDRIP: 0.0.0.0/0
+        - CIDRIP: 0.0.0.0/0 # We can close to outside
         - EC2SecurityGroupId: !GetAtt WebServerSecurityGroup.GroupId
 
   MyDatabaseServer:
@@ -145,7 +143,7 @@ Resources:
       DBInstanceClass: db.t2.micro #Required
       EngineVersion: 8.0.19
       MasterUsername: admin
-      MasterUserPassword: Serdar_1
+      MasterUserPassword: erdogan_1
       MultiAZ: false
       Port: 3306
       PubliclyAccessible: true
