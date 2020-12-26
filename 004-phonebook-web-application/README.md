@@ -40,6 +40,8 @@ Input in number field            Format to convert
 thousand                         Warning -> 'Invalid input: Phone number should be in numeric format'
 ```
 
+## Cloudformation Features
+
 - Second steps is deployment your web application using Python's Flask framework using Cloudformation on AWS. Cloudformation contains below features:
 
   - The application stack should be created with new AWS resources.
@@ -84,6 +86,8 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
   - Phonebook Application Website URL should be given as output by Cloudformation Service, after the stack created.
 
+  ![Cloudformation Diagram](cloudformation-diagram.png)
+
 ## Project Skeleton 
 
 ```text
@@ -100,7 +104,11 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 ## Expected Outcome
 
-![Phonebook App Search Page](./search-snapshot.png)
+![Events Snapshot](Events.png)
+
+![Home Page Snapshot](index.png)
+
+![Result Snapshot](result.png)
 
 ### At the end of the project, following topics are to be covered;
 
