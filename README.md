@@ -8,5 +8,5 @@ This repository contains materials related to the IT trainings like projects, ha
 
 - [AWS Projects](README.md)
 
-    - [Flask Deployment on EC2 with Cloudformation](./001-roman-numerals-converter/hands-on/README.md)
+    - [Flask Deployment on EC2 with Cloudformation](https://github.com/kopuskopecik/aws-projects/tree/master/001-roman-numerals-converter)
 
