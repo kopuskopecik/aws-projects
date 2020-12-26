@@ -39,7 +39,9 @@ Input             Output
 
 - As a second step, deployment the web application using Python's Flask framework.
 
-- Lastly, deploy the solution in the development environment on AWS Application Load Balancer using AWS Cloudformation Service to showcase your project. In the development environment, the Cloudformation template has using the followings,
+## Cloudformation
+
+Lastly, deploy the solution in the development environment on AWS Application Load Balancer using AWS Cloudformation Service to showcase your project. In the development environment, the Cloudformation template has using the followings,
 
    - The application stack should be created with new AWS resources. 
 
@@ -77,6 +79,8 @@ Input             Output
 
    - Milliseconds Converter Application Website URL should be given as output by Cloudformation Service, after the stack created.
 
+![Cloudformation Diagram](cloudformation-diagram.png)
+
 ## Project Skeleton 
 
 ```
@@ -87,10 +91,17 @@ Input             Output
 |----app.py            
 |----templates
         |----index.html  
-        |----result.html 
+        |----result.html
 ```
 
 ## Expected Outcome
+
+![Events Snapshot](Events.png)
+
+![Home Page Snapshot](index.png)
+
+![Result Snapshot](result.png)
+
 
 ### At the end of the project, following topics are to be covered;
 
