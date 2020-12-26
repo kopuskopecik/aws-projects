@@ -4,7 +4,7 @@ This repository contains my AWS and DevOps projects and hands-on trainings.
 
 ## Description
 
-This repository contains materials related to the IT trainings like projects, hands-on trainings.
+This repository contains materials related to the IT trainings like projects, hands-on training.
 
 - [AWS Projects](README.md)
 
