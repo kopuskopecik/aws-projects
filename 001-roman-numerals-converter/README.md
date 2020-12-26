@@ -72,6 +72,8 @@ Ten         Warning with "Not Valid! Please enter a number between 1 and 3999, i
 
    - Roman Numerals Converter Application Website URL should be given as output by Cloudformation Service, after the stack created.
 
+   ![Cloudformation Diagram](cloudformation-diagram.png)
+
 ## Project Skeleton 
 
 ```
@@ -87,7 +89,11 @@ Ten         Warning with "Not Valid! Please enter a number between 1 and 3999, i
 
 ## Expected Outcome
 
-![Project 001 Snapshot](project-001-snapshot.png)
+![Events Snapshot](Events.png)
+
+![Home Page Snapshot](project-001-snapshot.png)
+
+![Result Snapshot](result.png)
 
 ### At the end of the project, following topics are to be covered;
 
